@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Power of a Number</title>
+</head>
+<body>
+  <h2>Find Power (a^b)</h2>
+  <input type="number" id="base" placeholder="Base">
+  <input type="number" id="exp" placeholder="Exponent">
+  <button onclick="findPower()">Find Power</button>
+  <p id="result"></p>
+
+  <script>
+    function findPower() {
+      let base = parseFloat(document.getElementById("base").value);
+      let exp = parseInt(document.getElementById("exp").value);
+      let result = 1;
+      for (let i = 0; i < exp; i++) {
+        result *= base;
+      }
+      document.getElementById("result").innerText = `${base} ^ ${exp} = ${result}`;
+    }
+  </script>
+</body>
+</html>

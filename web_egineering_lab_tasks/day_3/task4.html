@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sum from 1 to n</title>
+</head>
+<body>
+  <h2>Find Sum from 1 to n</h2>
+  <input type="number" id="num" placeholder="Enter n">
+  <button onclick="findSum()">Find Sum</button>
+  <p id="result"></p>
+
+  <script>
+    function findSum() {
+      let n = parseInt(document.getElementById("num").value);
+      let sum = (n * (n + 1)) / 2;
+      document.getElementById("result").innerText = `Sum from 1 to ${n} is ${sum}`;
+    }
+  </script>
+</body>
+</html>
